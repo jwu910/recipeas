@@ -38,6 +38,14 @@ class Recipe extends Component {
                   this.props.removeRecipe(this.props.id)
                 }
               />
+              <Link to="/recipe-details">
+                <button
+                  className='btn-primary pull-right'
+                  handleClick={() => {
+                      this.props.loadStoredRecipe();
+                    }}
+                  >More Details</button>
+              </Link>
             </Well>
           </div>
         </Collapse>

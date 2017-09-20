@@ -1,6 +1,7 @@
  import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import RecipesList from '../containers/RecipesList';
+import RecipeDetails from './RecipeDetails';
 import ModifyTitle from '../containers/ModifyTitle';
 import ModifyIngredients from '../containers/ModifyIngredients';
 import SearchIngredient from '../containers/SearchIngredient';
@@ -51,6 +52,13 @@ const Main = (props) => {
                   marginBottom: '10px'
                 }} />
               )} />
+
+            <Route path='/recipe-details' render={() => (
+              <RecipeDetails
+                text="RECIPES" />
+            // component={RecipeDetails} />
+              )}/>
+
             </Switch>
         </Col>
       </Row>
