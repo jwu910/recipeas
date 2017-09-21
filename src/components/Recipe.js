@@ -16,6 +16,7 @@ class Recipe extends Component {
     this.setState({ open: !this.state.open });
   }
   render() {
+
     return (
       <div className='recipe-container'>
         <h4 className="recipe-title" onClick={this.toggleRecipe}>{this.props.title}</h4>
@@ -38,13 +39,8 @@ class Recipe extends Component {
                   this.props.removeRecipe(this.props.id)
                 }
               />
-              <Link to="/recipe-details">
-                <button
-                  className='btn-primary pull-right'
-                  handleClick={() => {
-                      this.props.loadStoredRecipe();
-                    }}
-                  >More Details</button>
+              <Link to={"recipe-details/" + this.props.id}>
+                <button className='glyphicon btn btn-primary pull-right'>More Details</button>
               </Link>
             </Well>
           </div>
