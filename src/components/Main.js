@@ -53,11 +53,8 @@ const Main = (props) => {
                 }} />
               )} />
 
-            <Route path='/recipe-details' render={() => (
-              <RecipeDetails
-                text="RECIPES" />
-            // component={RecipeDetails} />
-              )}/>
+            <Route path="/recipe-details/:id" component={RecipeDetails} />
+
 
             </Switch>
         </Col>
